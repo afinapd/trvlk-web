@@ -58,23 +58,35 @@ class CarRentalPage(ReusablePage):
 
     def input_pickup_car_location(self, location):
         if location == "Rental Office":
+            super().perform_action_on_element(LocatorCarRentalPage.PICKUP_RENTAL_OFFICE_RADIOBUTTON, "scroll_into_middle")
             super().perform_action_on_element(LocatorCarRentalPage.PICKUP_RENTAL_OFFICE_RADIOBUTTON, "click")
             super().perform_action_on_element(LocatorCarRentalPage.PICKUP_RENTAL_OFFICE_FIELD, "click")
             super().perform_action_on_element(LocatorCarRentalPage.PICKUP_RENTAL_OFFICE_TOP_RESULT, "click")
-        elif location == "Other Location":
+        else:
+            super().perform_action_on_element(LocatorCarRentalPage.PICKUP_OTHER_LOCATION_RADIOBUTTON, "scroll_into_middle")
             super().perform_action_on_element(LocatorCarRentalPage.PICKUP_OTHER_LOCATION_RADIOBUTTON, "click")
             print("==== TBD: Other Location")
         super().wait_for_page_load()
 
     def input_dropoff_car_location(self, location):
         if location == "Rental Office":
+            super().perform_action_on_element(LocatorCarRentalPage.DROPOFF_RENTAL_OFFICE_RADIOBUTTON, "scroll_into_middle")
             super().perform_action_on_element(LocatorCarRentalPage.DROPOFF_RENTAL_OFFICE_RADIOBUTTON, "click")
             print("==== TBD: Rental Office")
-        elif location == "Other Location":
+        else:
+            super().perform_action_on_element(LocatorCarRentalPage.DROPOFF_OTHER_LOCATION_RADIOBUTTON, "scroll_into_middle")
             super().perform_action_on_element(LocatorCarRentalPage.DROPOFF_OTHER_LOCATION_RADIOBUTTON, "click")
             super().perform_action_on_element(LocatorCarRentalPage.DROPOFF_OTHER_LOCATION_FIELD, "type", location)
             super().wait_for_page_load()
             super().perform_action_on_element(LocatorCarRentalPage.DROPOFF_OTHER_LOCATION_TOP_RESULT, "click")
+        super().wait_for_page_load()
+
+    def input_notes(self, notes):
+        super().perform_action_on_element(LocatorCarRentalPage.NOTES_FIELD, "type", notes)
+
+    def click_button_book_now(self):
+        super().perform_action_on_element(LocatorCarRentalPage.BOOK_NOW_BUTTON, "scroll_into_middle")
+        super().perform_action_on_element(LocatorCarRentalPage.BOOK_NOW_BUTTON, "click")
         super().wait_for_page_load()
 
 carRentalPage = CarRentalPage.get_instance()

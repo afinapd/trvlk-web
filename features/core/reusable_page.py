@@ -108,6 +108,10 @@ class ReusablePage:
                 self.get_element(locator).send_keys(Keys.ENTER)
             elif action == "clickwithactionclass":
                 ActionChains(self.driver).move_to_element(self.get_element(locator)).click().perform()
+            elif action == "dropdown":
+                self.get_element(locator).click()
+                dropdown = self.get_element(locator)
+                dropdown.find_element_by_xpath("//option[. = "+text+"]").click()
             elif action == "scroll":
                 self.driver.execute_script("arguments[0].scrollIntoView(true)", self.get_element(locator))
                 time.sleep(5)

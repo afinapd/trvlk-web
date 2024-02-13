@@ -44,3 +44,11 @@ def selectPickupLocation(self, location):
 @step('choose the drop-off location as "{location}"')
 def selectDropoffLocation(self, location):
     carRentalPage.input_dropoff_car_location(location)
+
+@step('input optional pick-up/drop-off notes "{notes}"')
+def inputNotes(self, notes):
+    carRentalPage.input_notes(notes)
+
+@step('clicks the Book Now button')
+def clickBookNowButton(self):
+    carRentalPage.click_button_book_now()

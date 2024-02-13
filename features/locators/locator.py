@@ -40,11 +40,14 @@ class LocatorCarRentalPage:
     DROPOFF_OTHER_LOCATION_FIELD = Locator(By.XPATH, "//div[@id='RENTAL_DROPOFF_LOCATION']/div/div/div[5]/div[2]/div/div/div/div/div/input")
     DROPOFF_OTHER_LOCATION_TOP_RESULT = Locator(By.XPATH, "//div[@id='RENTAL_DROPOFF_LOCATION']/div/div/div[5]/div[2]/div/div/div/div/div[2]/div/div/div/div[2]/div")
 
-class LocatorDigitalProductPage:
-    CARD_CONTAINER = Locator(By.CSS_SELECTOR, ".horizontal-card-container:nth-child(1)")
-    AXIS_PROVIDER = Locator(By.XPATH, "//img[@alt='axis']")
-    INDOSAT_PROVIDER = Locator(By.XPATH, "//img[@alt='indosat']")
-    SEMARTFREN_PROVIDER = Locator(By.XPATH, "//img[@alt='smartfren']")
-    TELKOMSEL_PROVIDER = Locator(By.XPATH, "//img[@alt='telkomsel']")
-    TRI_PROVIDER = Locator(By.XPATH, "//img[@alt='tri']")
-    XL_PROVIDER = Locator(By.XPATH, "//img[@alt='XL']")
+    NOTES_FIELD = Locator(By.CSS_SELECTOR, ".r-bcqeeo")
+    BOOK_NOW_BUTTON = Locator(By.XPATH, "//div[@id='__next']/div/div[5]/div/div/div/div[5]/div[3]/div/div[2]/div")
+
+class LocatorBookingPage:
+    NAME_FIELD = Locator(By.XPATH, "//div[@id='__next']/div[2]/div[2]/div/div[2]/div/div/div/div[2]/div/div/div/input")
+    NOHP_FIELD = Locator(By.XPATH, "//div[@id='__next']/div[2]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/div/input")
+    EMAIL_FIELD = Locator(By.XPATH, "//div[@id='__next']/div[2]/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/input")
+    TITLE_DRIVER_FIELD = Locator(By.XPATH, "//div[3]/div/div/div/div/div/div/div[2]/div/div/div/select")
+    NOHP_DRIVER_FIELD = Locator(By.XPATH, "//div[3]/div/div/div/div/div/div/div[2]/div[2]/div/div/input")
+    EMAIL_DRIVER_FIELD = Locator(By.XPATH, "//div[3]/div/input")
+    CONTINUE_BOOKING_BUTTON = Locator(By.XPATH, "//div[@id=\'__next\']/div[2]/div[2]/div/div[4]/div/div/div/div[2]")

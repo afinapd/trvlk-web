@@ -20,7 +20,7 @@ class BasePage(object):
 
     def __init__(self):
         if config.browser == "chrome":
-            chrome_options = webdriver.ChromeOptions()
+            # chrome_options = webdriver.ChromeOptions()
             self.driver = webdriver.Chrome()
             self.driver.maximize_window()
             self.driver.implicitly_wait(config.driver_timeout)
