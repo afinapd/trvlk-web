@@ -18,5 +18,5 @@ You can run a feature file by using -i or --include flags and then the name of t
 
 example:
 _ps. this video is incomplete in terms of automation because it is too long_
-https://github.com/afinapd/trvlk-web/assets/62136934/3d6f59df-2134-41fc-bb9f-6c23079158d1
+https://drive.google.com/file/d/1RxANjFN7EemltB-5G2MbC9MM7jTyzqfk/view?usp=sharing
 
